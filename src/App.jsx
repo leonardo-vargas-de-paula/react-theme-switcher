@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Box from "./components/Box";
 import "./App.css";
+import ThemeContext from "./contexts/ThemeContexts";
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -8,6 +9,7 @@ function App() {
     setTheme(target.checked ? "dark" : "light");
   };
   return (
+    <ThemeContext.Provider value={theme}>
     <main className={theme}>
       <p>Theme Switcher</p>
 
@@ -21,6 +23,7 @@ function App() {
         Dark Mode
       </label>
     </main>
+    </ThemeContext.Provider>
   );
 }
 
