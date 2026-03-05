@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Box from "./components/Box";
 import "./App.css";
 
 function App() {
@@ -9,6 +10,8 @@ function App() {
   return (
     <main className={theme}>
       <p>Theme Switcher</p>
+
+      <Box/>
       <label>
         <input
           type="checkbox"
